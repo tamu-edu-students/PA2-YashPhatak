@@ -29,22 +29,22 @@ table{
   <table>
   <thead>
   <tr>
-    <th class="<%= 'sorted ' + @sort_direction if @sort_column == 'title' %>">
-      <%= link_to 'Title', movies_path(sort: 'title', direction: toggle_direction('title')), class: 'sortable' %>
+      <th>
+        Title
       <span class="sort-indicator">
-        <%= sort_arrow('title') %>
+          <%= link_to sort_arrow('title'), movies_path(sort: 'title', direction: toggle_direction('title')), class: 'indicator-link' %>
       </span>
     </th>
-    <th class="<%= 'sorted ' + @sort_direction if @sort_column == 'rating' %>">
-      <%= link_to 'Rating', movies_path(sort: 'rating', direction: toggle_direction('rating')), class: 'sortable' %>
+      <th>
+        Rating
       <span class="sort-indicator">
-        <%= sort_arrow('rating') %>
+          <%= link_to sort_arrow('rating'), movies_path(sort: 'rating', direction: toggle_direction('rating')), class: 'indicator-link' %>
       </span>
     </th>
-    <th class="<%= 'sorted ' + @sort_direction if @sort_column == 'release_date' %>">
-      <%= link_to 'Release Date', movies_path(sort: 'release_date', direction: toggle_direction('release_date')), class: 'sortable' %>
+      <th>
+        Release Date
       <span class="sort-indicator">
-        <%= sort_arrow('release_date') %>
+          <%= link_to sort_arrow('release_date'), movies_path(sort: 'release_date', direction: toggle_direction('release_date')), class: 'indicator-link' %>
       </span>
     </th>
   </tr>
