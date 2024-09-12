@@ -1,6 +1,6 @@
 # README
 
-## Link to Heroku App : https://ancient-plateau-86565-e067b57f0207.herokuapp.com/ 
+### Link to Heroku App : https://ancient-plateau-86565-e067b57f0207.herokuapp.com/ 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
