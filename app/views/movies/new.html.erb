@@ -1,5 +1,5 @@
 <% content_for :title, "New movie" %>
-
+<div class="container">
 <h1>New movie</h1>
 
 <%= render "form", movie: @movie %>
@@ -8,4 +8,5 @@
 
 <div>
   <%= link_to "Back to movies", movies_path(sort: params[:sort], direction: params[:direction]) %>
+</div>
 </div>

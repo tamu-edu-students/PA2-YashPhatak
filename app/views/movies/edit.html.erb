@@ -1,12 +1,15 @@
 <% content_for :title, "Editing movie" %>
 
+<%= stylesheet_link_tag 'edit', media: 'all' %> 
+
+
+<div class="container">
 <h1>Editing movie</h1>
 
 <%= render "form", movie: @movie %>
 
 <br>
 
-<div>
   <%= link_to "Show this movie", movies_path(@movie,sort: params[:sort], direction: params[:direction]) %> |
   <%= link_to "Back to movies", movies_path(sort: params[:sort], direction: params[:direction]) %>
 </div>

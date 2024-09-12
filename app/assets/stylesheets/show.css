@@ -1,0 +1,49 @@
+div#movie-show p {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  /* Boxed section for movie details */
+  div#movie-show {
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 25px auto;
+    border-radius: 5px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  div#movie-show a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 500;
+    padding: 8px;
+    margin-right: 15px;
+  }
+  
+  div#movie-show a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  div#movie-show button {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    margin-top: 10px;
+  }
+  
+  div#movie-show button:hover {
+    background-color: #c82333;
+  }
+  
+
+  
