@@ -6,9 +6,8 @@ class MoviesController < ApplicationController
     if params[:sort].present? && params[:direction].present?
       @movies = Movie.order("#{params[:sort]} #{params[:direction]}")
     else
-    # @movies = Movie.all
+    @movies = Movie.all
 
-    @movies = Movie.order("#{@sort} #{@direction}")
     end
   end
 

@@ -17,22 +17,3 @@
 /* Table styling */
 /* Table styling */
 /* Table styling */
-
-
-.indicator-link {
-    text-decoration: none; /* Remove underline */
-    color: blue; /* Inherit color from parent or set your own */
-    display: inline-block; /* Make sure it behaves as an inline-block element */
-  }
- 
-  table {
-    border-collapse: collapse; /* Remove gaps between borders */
-    width: 100%; /* Adjust width as needed */
-    max-width: 1200px; /* Optional: Set a max-width for large screens */
-    
-  }
-  .sort-indicator{
-    a::visited{
-        background-color: yellow;
-    }
-  }

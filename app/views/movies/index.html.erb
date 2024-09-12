@@ -2,63 +2,54 @@
 
 <% content_for :title, "Movies" %>
 
+<%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= stylesheet_link_tag 'index', media: 'all' %> <!-- Add this line for the specific index CSS -->
+ 
 <h1>Movies</h1>
-<style>
-td,th,table {
-    border: solid 1px black;
-}
-table{
-  border-collapse: collapse;      
-}
-</style>
-<% if false %>
-<div id="movies">
-  <% @movies.each do |movie| %>
-    <%= render movie %>
-    <p>
-      <%= link_to "Show this movie", movie %>
-    </p>
-  <% end %>
+<div class="underline-separator"></div>
+
+<div style="text-align:right;padding-right:5%;">
+<%= button_to "+ Add Movie", new_movie_path(sort: params[:sort], direction: params[:direction]), method: :get, class: 'button-link' %>
+
 </div>
-
-<%= link_to "New movie", new_movie_path %>
-
-<% end %>
-
 <div id="movies">
   <table>
-  <thead>
-  <tr>
-      <th>
-        Title
-      <span class="sort-indicator">
-          <%= link_to sort_arrow('title'), movies_path(sort: 'title', direction: toggle_direction('title')), class: 'indicator-link' %>
-      </span>
-    </th>
-      <th>
-        Rating
-      <span class="sort-indicator">
-          <%= link_to sort_arrow('rating'), movies_path(sort: 'rating', direction: toggle_direction('rating')), class: 'indicator-link' %>
-      </span>
-    </th>
-      <th>
-        Release Date
-      <span class="sort-indicator">
-          <%= link_to sort_arrow('release_date'), movies_path(sort: 'release_date', direction: toggle_direction('release_date')), class: 'indicator-link' %>
-      </span>
-    </th>
-  </tr>
-</thead>
+    <thead>
+      <tr>
+        <th class="<%= 'sorted-header ' + (params[:sort] == 'title' ? 'sort-indicator-' + params[:direction] : '') %>">
+          Title
+          <span class="sort-indicator">
+            <%= link_to sort_arrow('title'), movies_path(sort: 'title', direction: toggle_direction('title')), class: 'indicator-link' %>
+          </span>
+        </th>
+        <th class="<%= 'sorted-header ' + (params[:sort] == 'rating' ? 'sort-indicator-' + params[:direction] : '') %>">
+          Rating
+          <span class="sort-indicator">
+            <%= link_to sort_arrow('rating'), movies_path(sort: 'rating', direction: toggle_direction('rating')), class: 'indicator-link' %>
+          </span>
+        </th>
+        <th class="<%= 'sorted-header ' + (params[:sort] == 'release_date' ? 'sort-indicator-' + params[:direction] : '') %>">
+          Release Date
+          <span class="sort-indicator">
+            <%= link_to sort_arrow('release_date'), movies_path(sort: 'release_date', direction: toggle_direction('release_date')), class: 'indicator-link' %>
+          </span>
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
     <tbody>
       <% @movies.each do |movie| %>
         <tr>
           <td><%= movie.title %></td>
           <td><%= movie.rating %></td>
           <td><%= movie.release_date %></td>
+          <td><%= button_to "Show movie", movie_path(movie, sort: params[:sort], direction: params[:direction]), method: :get, class: 'button-link' %>
+</td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
 
-<%= link_to "New Movie", new_movie_path(sort: params[:sort], direction: params[:direction]) %>
