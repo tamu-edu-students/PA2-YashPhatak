@@ -95,6 +95,27 @@ body {
   .button-link:focus {
     outline: none; 
   }
+  .button-link-2 {  
+    border: none;  
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 5px 10px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 3px;
+    transition: background-color 0.3s, transform 0.3s; 
+  }
+  .button-link-2:hover {
+    background-color: #218838; 
+    transform: scale(1.05); 
+  }
+  
+  .button-link-2:focus {
+    outline: none; 
+  }
 
   .underline-separator {
     margin: 20px 0;

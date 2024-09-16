@@ -9,7 +9,7 @@
 <div class="underline-separator"></div>
 
 <div style="text-align:right;padding-right:5%;">
-<%= link_to "+ Add Movie", new_movie_path(sort: params[:sort], direction: params[:direction]), class: 'button-link' %>
+<%= link_to "+ Add Movie", new_movie_path(sort: params[:sort], direction: params[:direction]), class: 'button-link-2' %>
 </div>
 <div id="movies">
   <table>
@@ -44,9 +44,8 @@
           <td><%= movie.title %></td>
           <td><%= movie.rating %></td>
           <td><%= movie.release_date %></td>
-          <td><%= button_to "Show movie", movie_path(movie, sort: params[:sort], direction: params[:direction]), method: :get, class: 'button-link' %>
-</td>
-        </tr>
+          <td><%= link_to "Show movie", movie_path(movie, sort: params[:sort], direction: params[:direction]), method: :get, class: 'button-link' %>   </td>
+          </tr>
       <% end %>
     </tbody>
   </table>
